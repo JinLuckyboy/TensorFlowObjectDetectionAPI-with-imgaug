@@ -9,6 +9,7 @@ pipeline.config에 data_augmentation_options를 다음과 같이 설정하십시
 train_config: {
   data_augmentation_options {
     random_imgaug {
+      random_coef: 0.0 # [0, 1] 사이의 숫자를 가지며, 0이면 항상 적용하고, 1이면 항상 원본 이미지를 사용합니다. 이 옵션은 선택이므로 지워도 됩니다.
     }
   }
 }
