@@ -5,7 +5,7 @@
 `protoc object_detection/proto/*.proto --python_out=.`
 
 pipeline.config에 data_augmentation_options를 다음과 같이 설정하십시오.
-```config
+```yaml
 train_config: {
   data_augmentation_options {
     random_imgaug {
