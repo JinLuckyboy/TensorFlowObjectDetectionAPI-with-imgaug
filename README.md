@@ -1,6 +1,7 @@
 # TensorFlowObjectDetectionAPI-with-imgaug
 
 .proto 파일은 다음과 같은 명령으로 .py 파일을 생성하십시오.
+
 `protoc object_detection/proto/*.proto --python_out=.`
 
 pipeline.config에 data_augmentation_options를 다음과 같이 설정하십시오.
