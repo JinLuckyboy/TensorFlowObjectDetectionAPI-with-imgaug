@@ -24,4 +24,9 @@ augseq = iaa.Sequential([
 ])
 ```
 
+참고가 될만한 사이트:
+- https://github.com/tensorflow/models/tree/master/research/object_detection
+- https://github.com/aleju/imgaug
+- https://imgaug.readthedocs.io/en/latest/source/overview_of_augmenters.html
+
 2020년 11월 7일 github.com/tensorflow/models master브런치를 기준으로 제작되었습니다.
