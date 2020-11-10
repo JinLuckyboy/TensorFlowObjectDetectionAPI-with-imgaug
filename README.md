@@ -23,3 +23,5 @@ augseq = iaa.Sequential([
     # 여기에 추가
 ])
 ```
+
+2020년 11월 7일 github.com/tensorflow/models master브런치를 기준으로 제작되었습니다.
