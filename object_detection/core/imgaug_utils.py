@@ -19,9 +19,10 @@ def augment(image, boxes, labels):
     for i in range(len(boxes_np)):
         box = boxes_np[i]
         label = labels_np[i]
+        ymin, xmin, ymax, xmax = box
         bbs.append(BoundingBox(
-            x1=box[0]*width, y1=box[1]*height,
-            x2=box[2]*width, y2=box[3]*height,
+            x1=xmin*width, y1=ymin*height,
+            x2=xmax*width, y2=ymax*height,
             label=label))
     bbs = BoundingBoxesOnImage(bbs, shape=image_np.shape)
     image_aug, bbs_aug = augseq(image=image_np, bounding_boxes=bbs) # float np.ndarray
