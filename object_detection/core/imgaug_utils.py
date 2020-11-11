@@ -8,7 +8,13 @@ augseq = iaa.Sequential([
     iaa.Crop(px=(0, 16)), # crop images from each side by 0 to 16px (randomly chosen)
     iaa.Fliplr(0.5), # horizontally flip 50% of the images
     iaa.GaussianBlur(sigma=(0, 3.0)) # blur images with a sigma of 0 to 3.0
+], random_order=True)
+""" # Debug image
+augseq = iaa.Sequential([
+    augseq,
+    iaa.SaveDebugImageEveryNBatches("debug_image", 1),
 ])
+"""
 
 def augment(image, boxes, labels):
     image_np = image.numpy().astype(np.uint8) if type(image) == EagerTensor else image
