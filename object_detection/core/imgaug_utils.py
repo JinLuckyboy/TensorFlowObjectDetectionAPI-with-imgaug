@@ -11,7 +11,7 @@ augseq = iaa.Sequential([
 ])
 
 def augment(image, boxes, labels):
-    image_np = image.numpy() if type(image) == EagerTensor else image
+    image_np = image.numpy().astype(np.uint8) if type(image) == EagerTensor else image
     boxes_np = boxes.numpy() if type(boxes) == EagerTensor else boxes
     labels_np = labels.numpy() if type(labels) == EagerTensor else labels
     width, height, _ = image_np.shape
