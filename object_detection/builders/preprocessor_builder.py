@@ -424,5 +424,11 @@ def build(preprocessor_step_config):
         'scale_max': config.scale_max,
         'output_size': config.output_size,
     }
+  
+  if step_type == 'random_imgaug':
+    config = preprocessor_step_config.random_imgaug
+    return preprocessor.random_imgaug, {
+        'random_coef': config.random_coef,
+    }
 
   raise ValueError('Unknown preprocessing step.')
