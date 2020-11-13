@@ -19,6 +19,8 @@ Create .py file from .proto file using following command.
 `protoc object_detection/proto/*.proto --python_out=.`
 
 ---
+Use augmentation
+===
 pipeline.config에 data_augmentation_options를 다음과 같이 설정하십시오.
 
 Set data_augmentation_options in pipeline.config as follows.
