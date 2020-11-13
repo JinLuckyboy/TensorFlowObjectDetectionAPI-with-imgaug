@@ -4,11 +4,14 @@ Support Language
 - Korean
 - English
 
+---
 .proto 파일로부터 다음과 같은 명령으로 .py 파일을 생성하십시오.
 
 Create .py file from .proto file using following command.
+
 `protoc object_detection/proto/*.proto --python_out=.`
 
+---
 pipeline.config에 data_augmentation_options를 다음과 같이 설정하십시오.
 
 Set data_augmentation_options in pipeline.config as follows.
@@ -24,6 +27,7 @@ train_config: {
 }
 ```
 
+---
 object_detection/core/imgaug_utils.py를 열어 augmentation 옵션을 수정하십시오.
 
 Open object_detection/core/imgaug_utils.py and Edit augmentation options.
@@ -37,9 +41,14 @@ augseq = iaa.Sequential([
 ])
 ```
 
+---
 참고가 될만한 사이트:
+
+Recommanded Site:
 - https://github.com/tensorflow/models/tree/master/research/object_detection
 - https://github.com/aleju/imgaug
 - https://imgaug.readthedocs.io/en/latest/source/overview_of_augmenters.html
 
+---
 2020년 11월 7일 github.com/tensorflow/models master브런치를 기준으로 제작되었습니다.
+This is made based 2020-11-7 github.com/tensorflow/models master branch.
