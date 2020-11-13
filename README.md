@@ -51,4 +51,5 @@ Recommanded Site:
 
 ---
 2020년 11월 7일 github.com/tensorflow/models master브런치를 기준으로 제작되었습니다.
+
 This is made based 2020-11-7 github.com/tensorflow/models master branch.
