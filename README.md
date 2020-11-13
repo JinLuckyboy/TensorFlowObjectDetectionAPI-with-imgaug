@@ -5,6 +5,11 @@ Support Language
 - English
 
 ---
+Release v1.0
+===
+Edited all of bug.
+
+---
 .proto 파일로부터 다음과 같은 명령으로 .py 파일을 생성하십시오.
 
 Create .py file from .proto file using following command.
