@@ -9,7 +9,8 @@ augseq = iaa.Sequential([
     iaa.Fliplr(0.5), # horizontally flip 50% of the images
     iaa.GaussianBlur(sigma=(0, 3.0)) # blur images with a sigma of 0 to 3.0
 ], random_order=True)
-""" # Debug image
+# """ <- Comment Guide
+""" Debug image
 augseq = iaa.Sequential([
     augseq,
     iaa.SaveDebugImageEveryNBatches("debug_image", 1),
