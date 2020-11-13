@@ -10,6 +10,8 @@ Release v1.0
 Fixed all of bug.
 
 ---
+Create .py from .proto
+===
 .proto 파일로부터 다음과 같은 명령으로 .py 파일을 생성하십시오.
 
 Create .py file from .proto file using following command.
@@ -33,6 +35,8 @@ train_config: {
 ```
 
 ---
+Add augmentation options
+===
 object_detection/core/imgaug_utils.py를 열어 augmentation 옵션을 수정하십시오.
 
 Open object_detection/core/imgaug_utils.py and Edit augmentation options.
