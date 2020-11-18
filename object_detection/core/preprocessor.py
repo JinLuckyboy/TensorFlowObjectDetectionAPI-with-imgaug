@@ -4297,12 +4297,12 @@ def random_imgaug(image,
     
     def reshape_func(result, image, type):
         type_np = type.numpy()
-        width, height, channel = image.shape
+        height, width, channel = image.shape
         if type_np == b'image': #image
-            cut_image = result[:width * height * channel]
+            cut_image = result[:height * width * channel]
             shaped = tf.reshape(cut_image, image.shape)
         else:
-            cut_other = result[width * height * channel:]
+            cut_other = result[height * width * channel:]
             t = cut_other.shape[0]//5
             if type_np == b'boxes': #boxes
                 boxes = cut_other[:t*4]
