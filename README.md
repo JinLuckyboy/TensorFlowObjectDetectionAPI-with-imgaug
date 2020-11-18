@@ -5,9 +5,9 @@ Support Language
 - English
 
 ---
-Release v1.0
+Release v1.1
 ===
-Fixed all of bug.
+Check lastest version.
 
 ---
 Create .py from .proto
