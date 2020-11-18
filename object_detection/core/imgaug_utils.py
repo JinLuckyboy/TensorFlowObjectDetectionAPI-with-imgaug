@@ -38,7 +38,7 @@ def augment(image, boxes, labels):
     boxes_aug = []
     labels_aug = []
     for bb in bbs_aug:
-        boxes_aug.append([bb.x1/width, bb.y1/height, bb.x2/width, bb.y2/height])
+        boxes_aug.append([bb.y1/height, bb.x1/width, bb.y2/height, bb.x2/width])
         labels_aug.append(bb.label)
     boxes_aug = np.array(boxes_aug)
     labels_aug = np.array(labels_aug)
