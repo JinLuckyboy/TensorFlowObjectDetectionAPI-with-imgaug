@@ -86,6 +86,9 @@ augseq = iaa.Sequential([
 ])
 ```
 
+REMEMBER!! Each time you change the augmentation options for `imgaug_utils.py` you MUST uninstall-reinstall object detection API for changes to take effect. 
+You can do it yourself or use the script `./repack.sh` for simplicity.
+
 ---
 참고가 될만한 사이트:
 
