@@ -30,8 +30,7 @@ message PreprocessingStep {
     SSDRandomCrop ssd_random_crop = 21;
     SSDRandomCropPad ssd_random_crop_pad = 22;
     SSDRandomCropFixedAspectRatio ssd_random_crop_fixed_aspect_ratio = 23;
-    SSDRandomCropPadFixedAspectRatio ssd_random_crop_pad_fixed_aspect_ratio =
-        24;
+    SSDRandomCropPadFixedAspectRatio ssd_random_crop_pad_fixed_aspect_ratio = 24;
     RandomVerticalFlip random_vertical_flip = 25;
     RandomRotation90 random_rotation90 = 26;
     RGBtoGray rgb_to_gray = 27;
@@ -47,6 +46,7 @@ message PreprocessingStep {
     RandomSquareCropByScale random_square_crop_by_scale = 37;
     RandomScaleCropAndPadToSquare random_scale_crop_and_pad_to_square = 38;
     AdjustGamma adjust_gamma = 39;
+    RandomImgAug random_imgaug = 40;
   }
 }
 
