@@ -89,7 +89,7 @@ PREPROCESSING_FUNCTION_MAP = {
         preprocessor.random_adjust_saturation,
     'random_distort_color':
         preprocessor.random_distort_color,
-    'random_jitter_boxes':
+      'random_jitter_boxes':
         preprocessor.random_jitter_boxes,
     'random_crop_to_aspect_ratio':
         preprocessor.random_crop_to_aspect_ratio,
@@ -103,12 +103,14 @@ PREPROCESSING_FUNCTION_MAP = {
         preprocessor.random_patch_gaussian,
     'rgb_to_gray':
         preprocessor.rgb_to_gray,
-    'scale_boxes_to_pixel_coordinates': (
-        preprocessor.scale_boxes_to_pixel_coordinates),
+    'scale_boxes_to_pixel_coordinates': 
+        (preprocessor.scale_boxes_to_pixel_coordinates),
     'subtract_channel_mean':
         preprocessor.subtract_channel_mean,
     'convert_class_logits_to_softmax':
         preprocessor.convert_class_logits_to_softmax,
+    'adjust_gamma':
+        preprocessor.adjust_gamma,
 }
 
 
@@ -121,6 +123,16 @@ RESIZE_METHOD_MAP = {
     preprocessor_pb2.ResizeImage.NEAREST_NEIGHBOR: (
         tf.image.ResizeMethod.NEAREST_NEIGHBOR),
 }
+
+
+def get_random_jitter_kwargs(proto):
+  return {
+      'ratio':
+          proto.ratio,
+      'jitter_mode':
+          preprocessor_pb2.RandomJitterBoxes.JitterMode.Name(proto.jitter_mode
+                                                            ).lower()
+  }
 
 
 def build(preprocessor_step_config):
@@ -424,11 +436,15 @@ def build(preprocessor_step_config):
         'scale_max': config.scale_max,
         'output_size': config.output_size,
     }
-  
+
   if step_type == 'random_imgaug':
     config = preprocessor_step_config.random_imgaug
     return preprocessor.random_imgaug, {
         'random_coef': config.random_coef,
     }
 
+  if step_type == 'random_jitter_boxes':
+    config = preprocessor_step_config.random_jitter_boxes
+    kwargs = get_random_jitter_kwargs(config)
+    return preprocessor.random_jitter_boxes, kwargs
   raise ValueError('Unknown preprocessing step.')

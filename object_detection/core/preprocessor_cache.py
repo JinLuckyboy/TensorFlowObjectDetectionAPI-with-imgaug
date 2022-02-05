@@ -59,7 +59,7 @@ class PreprocessorCache(object):
   PATCH_GAUSSIAN = 'patch_gaussian'
   SQUARE_CROP_BY_SCALE = 'square_crop_scale'
   IMGAUG = 'imgaug'
-
+  
   # 27 permitted function ids
   _VALID_FNS = [ROTATION90, HORIZONTAL_FLIP, VERTICAL_FLIP, PIXEL_VALUE_SCALE,
                 IMAGE_SCALE, RGB_TO_GRAY, ADJUST_BRIGHTNESS, ADJUST_CONTRAST,
