@@ -100,7 +100,6 @@ You can do it yourself or use the script `./repack.sh` for simplicity.
 
 ---
 ## Python versions that imgaug supports
-===
 
 `The library uses python, which must be installed. Python 2.7, 3.4, 3.5, 3.6, 3.7 and 3.8 are supported.`
 
