@@ -23,8 +23,8 @@ Updated to last version of tf object detection API
 
 ```
 cd TensorFlowObjectDetectionAPI-with-imgaug
-chmod +x install.sh
-./install.sh
+chmod +x patch.sh
+./patch.sh
 ```
 
 4- Install object detection API normally (creating the .protos first)
