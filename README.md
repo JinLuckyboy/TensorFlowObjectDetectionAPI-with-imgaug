@@ -21,15 +21,17 @@ Updated to last version of tf object detection API
 
 3- Replace manually the files inside this folder repo into the Object Detection folder `models/research/object_detection` or run this file to do it automatically (both repos need to be in the same folder):
 
+직접 이 저장소에 있는 파일을 Object Detection 폴더 `models/research/object_detection`로 덮어씌우거나, 이 파일을 실행해서 자동으로 하세요.(두 개의 클론한 저장소 폴더는 같은 폴더에 있어야 합니다.):
+
 ```
 cd TensorFlowObjectDetectionAPI-with-imgaug
-chmod +x install.sh
-./install.sh
+chmod +x patch.sh
+./patch.sh
 ```
 
 4- Install object detection API normally (creating the .protos first)
 
-.proto 파일로부터 다음과 같은 명령으로 .py 파일을 생성하십시오.
+object detection API 일반 설치 (.proto 파일로부터 .py 파일을 생성합니다.)
 
 ```
 cd ../models/research
@@ -41,9 +43,13 @@ python -m pip install --use-feature=2020-resolver .
 python object_detection/builders/model_builder_tf2_test.py
 ```
 
-You need to have ìmgaug installed `pip install imgaug` in order for everything to work.
+You need to have imgaug installed `pip install imgaug` in order for everything to work.
 
 If installation was sucessfull, you should get no errors and OK after finish
+
+정상적으로 작동하기 위해서는 `pip install imgaug`로 imgaug를 설치해야 합니다.
+
+설치가 성공했으면, Verify 단계에서 error가 없고 OK가 출력되어야 합니다.
 
 
 
@@ -88,6 +94,18 @@ augseq = iaa.Sequential([
 
 REMEMBER!! Each time you change the augmentation options for `imgaug_utils.py` you MUST uninstall-reinstall object detection API for changes to take effect. 
 You can do it yourself or use the script `./repack.sh` for simplicity.
+
+명심하세요!! 클론한 저장소에서 `imgaug_utils.py`를 수정하면 수정사항을 적용하기 위해 object detection API를 재설치해야 합니다. 직접 설치된 경로에서 수정하거나 `./repack.sh`를 실행해서 간단하게 재설치할 수 있습니다.
+
+
+---
+## Python versions that imgaug supports
+
+`The library uses python, which must be installed. Python 2.7, 3.4, 3.5, 3.6, 3.7 and 3.8 are supported.`
+
+imgaug가 지원하는 파이썬 버전: 2.7, 3.4, 3.5, 3.6, 3.7, 3.8
+
+https://imgaug.readthedocs.io/en/latest/source/installation.html
 
 ---
 참고가 될만한 사이트:

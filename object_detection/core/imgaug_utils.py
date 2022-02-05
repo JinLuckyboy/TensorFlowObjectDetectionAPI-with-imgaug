@@ -11,10 +11,14 @@ augseq = iaa.Sequential([
 ], random_order=True)
 # """ <- Comment Guide
 """ Debug image
+every_n_batches = 1
 augseq = iaa.Sequential([
     augseq,
-    iaa.SaveDebugImageEveryNBatches("debug_image", 1),
+    iaa.SaveDebugImageEveryNBatches("debug_image", every_n_batches),
 ])
+# Debug images saved in "{command-line directory}/debug_image/" directory. You must create the directory. If not, it cause error.
+# Save a debug plot to a temporary folder every 'every_n_batches' batches.
+# https://imgaug.readthedocs.io/en/latest/source/overview/debug.html
 """
 
 def augment(image, boxes, labels):
