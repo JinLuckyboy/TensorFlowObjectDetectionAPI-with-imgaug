@@ -41,7 +41,7 @@ python -m pip install --use-feature=2020-resolver .
 python object_detection/builders/model_builder_tf2_test.py
 ```
 
-You need to have ìmgaug installed `pip install imgaug` in order for everything to work.
+You need to have imgaug installed `pip install imgaug` in order for everything to work.
 
 If installation was sucessfull, you should get no errors and OK after finish
 
