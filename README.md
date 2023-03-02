@@ -13,11 +13,15 @@ Updated to last version of tf object detection API
 
 1- Clone this repo
 
-`git clone https://github.com/JinLuckyboy/TensorFlowObjectDetectionAPI-with-imgaug.git`
+```
+git clone https://github.com/JinLuckyboy/TensorFlowObjectDetectionAPI-with-imgaug.git
+```
 
 2- Clone tensorflow models repo
 
-`git clone https://github.com/tensorflow/models.git`
+```
+git clone https://github.com/tensorflow/models.git
+```
 
 3- Replace manually the files inside this folder repo into the Object Detection folder `models/research/object_detection` or run this file to do it automatically (both repos need to be in the same folder):
 
